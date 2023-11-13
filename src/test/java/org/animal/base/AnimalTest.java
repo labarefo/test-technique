@@ -7,7 +7,7 @@ public class AnimalTest {
 
     @Test
     void should_success_present_poisson() {
-        Assertions.assertEquals(App.Animal.presenterAnimal("poisson"), """
+        Assertions.assertEquals(App.Animal.description("poisson"), """
                         ==>je suis un animal qui vit dans l'eau
                         ==>je me nourris de plactons
                         """);
@@ -25,9 +25,9 @@ public class AnimalTest {
 
     @Test
     void should_fails_when_animal_unknown() {
-        Assertions.assertEquals(App.Animal.presenterAnimal("hibou"), "Animal inconnu");
-        Assertions.assertEquals(App.Animal.deplacement("hibou"), "Animal inconnu");
-        Assertions.assertEquals(App.Animal.cri("hibou"), "Animal inconnu");
+        Assertions.assertEquals(App.Animal.description("hibou"), "Description: Animal inconnu");
+        Assertions.assertEquals(App.Animal.deplacement("hibou"), "Déplacement: Animal inconnu");
+        Assertions.assertEquals(App.Animal.cri("hibou"), "Cri: Animal inconnu");
     }
 
 
